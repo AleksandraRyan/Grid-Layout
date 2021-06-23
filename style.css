@@ -17,7 +17,7 @@
 .container,
 body {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 10px auto;
   background: var(--Light-grayish-blue);
 }
 
