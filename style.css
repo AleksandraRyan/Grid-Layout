@@ -22,16 +22,15 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   padding: 10px 50px;
   font-family: var(--font-family);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas:
     'a a b c'
     ' d e e c';
-  grid-gap: 1.5rem;
+
   gap: 1.5rem;
 }
 
@@ -88,8 +87,8 @@ body {
   height: 102px;
   width: 102px;
   top: 5px;
-  left: 65%;
-  z-index: 1;
+  left: 75%;
+  /* z-index: ; */
 }
 
 .card.blue {
@@ -153,5 +152,22 @@ body {
 
   body {
     overflow-x: hidden;
+  }
+
+  .card .user-info {
+    position: sticky;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .card.violet:after {
+    content: '';
+    position: absolute;
+    background-image: url('/images/bg-pattern-quotation.svg');
+    height: 100px;
+    width: 100px;
+    top: 5px;
+    left: 58%;
   }
 }
