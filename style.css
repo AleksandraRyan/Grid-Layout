@@ -17,20 +17,22 @@
 .container,
 body {
   max-width: 1440px;
-  margin: 10px auto;
+  margin: 20px auto;
   background: var(--Light-grayish-blue);
 }
 
 .container {
-  width: 100%;
   padding: 10px 50px;
+  width: 100%;
   font-family: var(--font-family);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   grid-template-areas:
     'a a b c'
     ' d e e c';
-
   gap: 1.5rem;
 }
 
@@ -140,12 +142,12 @@ body {
 @media (max-width: 768px) {
   .container {
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-areas:
       'a' 'b' 'd' 'e'
       'c';
     justify-content: center;
     align-items: center;
-    max-width: fit-content;
     margin: 0;
     min-width: 100vw;
   }
